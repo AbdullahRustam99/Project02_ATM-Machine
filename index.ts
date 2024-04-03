@@ -55,25 +55,11 @@ if (correctPin.pin === savePin) {
 			message: chalk.bold.hex('#FF005D')("Select Fast Cash "),
 			choices: ["500", "1000", "5000", "7000", "10000"]
 		}])
-		if (fastCashAns.fastCash === "500") {
-			myBalance -= 500
+		if (fastCashAns.fastCash > myBalance ) {
+			console.log(chalk.bold.hex("#FF0400")("Balance is insufficient"));
+		}else{
+			myBalance -= fastCashAns.fastCash
 			console.log(chalk.bold.hex("#33EB00")(`Your Remaning Bank Balance is ${myBalance}`));
-
-		} else if (fastCashAns.fastCash === "1000") {
-			myBalance -= 1000
-			console.log(chalk.bold.hex("#33EB00")(`Your Remaning Bank Balance is ${myBalance}`));
-
-		} else if (fastCashAns.fastCash === "5000") {
-			myBalance -= 5000
-			console.log(chalk.bold.hex("#33EB00")(`Your Remaning Bank Balance is ${myBalance}`));
-		} else if (fastCashAns.fastCash === "7000") {
-			myBalance -= 7000
-			console.log(chalk.bold.hex("#33EB00")(`Your Remaning Bank Balance is ${myBalance}`));
-
-		} else if (fastCashAns.fastCash === "10000") {
-			myBalance -= 10000
-			console.log(chalk.bold.hex("#33EB00")(`Your Remaning Bank Balance is ${myBalance}`));
-
 		}
 	}
 } else {
