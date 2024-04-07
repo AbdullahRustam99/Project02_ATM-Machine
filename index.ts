@@ -3,6 +3,14 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
+console.log(chalk.bold("\n#####################################################"));
+console.log(chalk.bold("====================================================="));
+console.log(chalk.bold("\tWelcome To ABDULLAH ATM Machine"));
+console.log(chalk.bold("====================================================="));
+console.log(chalk.bold("#####################################################"));
+console.log("\n");
+
+
 let myBalance = 10000;
 let savePin = 3221;
 
@@ -55,9 +63,9 @@ if (correctPin.pin === savePin) {
 			message: chalk.bold.hex('#FF005D')("Select Fast Cash "),
 			choices: ["500", "1000", "5000", "7000", "10000"]
 		}])
-		if (fastCashAns.fastCash > myBalance ) {
+		if (fastCashAns.fastCash > myBalance) {
 			console.log(chalk.bold.hex("#FF0400")("Balance is insufficient"));
-		}else{
+		} else {
 			myBalance -= fastCashAns.fastCash
 			console.log(chalk.bold.hex("#33EB00")(`Your Remaning Bank Balance is ${myBalance}`));
 		}

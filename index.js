@@ -1,6 +1,12 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
+console.log(chalk.bold("\n#####################################################"));
+console.log(chalk.bold("====================================================="));
+console.log(chalk.bold("\tWelcome To ABDULLAH ATM Machine"));
+console.log(chalk.bold("====================================================="));
+console.log(chalk.bold("#####################################################"));
+console.log("\n");
 let myBalance = 10000;
 let savePin = 3221;
 let correctPin = await inquirer.prompt([{
